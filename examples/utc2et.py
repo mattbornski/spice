@@ -10,7 +10,8 @@ def utc2et(utc):
     kernels = glob.glob(os.path.join(dir, '*.tsc')) \
       + glob.glob(os.path.join(dir, '*.tls'))
     for kernel in kernels:
-        spice.api.furnsh(kernel)
+        spice.internal.furnsh(kernel)
+
     t = spice.timestamp().from_utc(scid = -362, utc = utc)
     return t.to_et()
 

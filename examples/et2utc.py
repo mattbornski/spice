@@ -5,9 +5,9 @@ import glob
 import os.path
 import spice
 
-def utc2met(utc):
-    t = spice.timestamp().from_utc(scid = -362, utc = utc)
-    return t.to_met()
+def et2utc(et):
+    t = spice.timestamp().from_et(scid = -362, et = et)
+    return t.to_utc()
 
 if __name__ == '__main__':
     dir = os.path.dirname(__file__)
@@ -17,9 +17,9 @@ if __name__ == '__main__':
         spice.internal.furnsh(kernel)
 
     timestamps = [
-      datetime.datetime.utcnow().isoformat(),
-      '2013-02-17T12:10:37',
+      340452060.128,
+      414375103.185,
     ]
     for timestamp in timestamps:
-        print 'UTC: ' + str(timestamp)
-        print 'MET: ' + str(utc2met(timestamp))
+        print 'ET: ' + str(timestamp)
+        print 'UTC: ' + str(et2utc(timestamp))
