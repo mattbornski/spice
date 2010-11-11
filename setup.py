@@ -40,7 +40,7 @@ if __name__ == '__main__':
     # on this system.
     setuptools.setup(
       name = 'spice',
-      version = '0.11',
+      version = '0.12',
       description = 'This package provides a limited interface ' \
         + 'to the NASA NAIF SPICE library.',
       author = 'Matt Born',
