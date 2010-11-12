@@ -44,8 +44,8 @@ if __name__ == '__main__':
       description = 'This package provides a limited interface ' \
         + 'to the NASA NAIF SPICE library.',
       author = 'Matt Born',
-      author_email = 'mattborn@ssl.berkeley.edu',
-      url = 'http://efw.ssl.berkeley.edu/packages/spice',
+      author_email = 'mtborn@gmail.com',
+      url = 'https://github.com/mattborn/spice',
       classifiers = [
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Science/Research',
